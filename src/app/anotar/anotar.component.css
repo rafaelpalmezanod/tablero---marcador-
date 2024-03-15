@@ -1,0 +1,97 @@
+.equipos {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: auto;
+    width: 800px;
+    
+  }
+  
+  .equipo {
+    
+    width: 48%;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    text-align: center;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  .equipo h2 {
+    font-size: 18px;
+    margin-bottom: 10px;
+    color: #333;
+  }
+  
+  .equipo .puntuacion {
+    font-size: 36px;
+    font-weight: bold;
+    margin-bottom: 10px;
+    color: #000;
+  }
+  
+  .equipo .estado {
+    font-size: 18px;
+    font-weight: bold;
+    margin-top: 10px;
+  }
+  
+  .equipo1 .estado.ganando {
+    color: #008000;
+  }
+  
+  .equipo1 .estado.perdiendo {
+    color: #ff0000;
+  }
+  
+  .equipo1 .estado.empate {
+    color: #808080;
+  }
+  
+  .equipo2 .estado.ganando {
+    color: #008000;
+  }
+  
+  .equipo2 .estado.perdiendo {
+    color: #ff0000;
+  }
+  
+  .equipo2 .estado.empate {
+    color: #808080;
+  }
+  
+  .boton-anotar {
+    padding: 10px 20px;
+    font-size: 16px;
+    font-weight: bold;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    cursor: pointer;
+    background-color: #ccc;
+    color: #000;
+    margin-top: 10px;
+  }
+  
+  .boton-anotar:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+  }
+  .boton-comenzar {
+    display: flex;
+    padding: 10px 20px;
+    font-size: 16px;
+    font-weight: bold;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    cursor: pointer;
+    background-color: #008000;
+    color: #fff;
+    margin: auto;
+    width: 200px;
+  }
+  
+  .boton-comenzar:hover {
+    background-color: #006000;
+  }
+  

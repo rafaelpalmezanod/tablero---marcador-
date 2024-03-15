@@ -1,0 +1,106 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+  
+  body {
+    font-family: sans-serif;
+    background-color: #f5f5f5;
+  }
+  
+  .contenedor {
+    width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+  }
+  
+  h1 {
+    text-align: center;
+    font-size: 24px;
+    margin-bottom: 20px;
+  }
+  
+  .equipos {
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  .equipo {
+    width: 48%;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    text-align: center;
+  }
+  
+  .equipo h2 {
+    font-size: 18px;
+    margin-bottom: 10px;
+  }
+  
+  .equipo .puntuacion {
+    font-size: 36px;
+    font-weight: bold;
+  }
+  
+  .temporizador {
+    text-align: center;
+    margin-top: 20px;
+  }
+  
+  .temporizador .tiempo {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 10px;
+  }
+  
+  .temporizador .selector-tiempo {
+    padding: 5px 10px;
+    font-size: 16px;
+    margin-bottom: 10px;
+  }
+  
+  .temporizador .tiempo-personalizado {
+    padding: 5px 10px;
+    font-size: 16px;
+    width: 100px;
+  }
+  .tiempo {
+    font-family: "Montserrat", sans-serif;
+    font-size: 48px;
+    font-weight: bold;
+    color: #000;
+    text-align: center;
+    margin-bottom: 10px;
+    padding: 10px 20px;
+    border: 2px solid #ddd;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  .tiempo::after {
+    content: "";
+    display: inline-block;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color: #000;
+    margin-left: 10px;
+    animation: pulse 1s infinite;
+  }
+  
+  @keyframes pulse {
+    0% {
+      transform: scale(1);
+    }
+    50% {
+      transform: scale(1.2);
+    }
+    100% {
+      transform: scale(1);
+    }
+  }
+  
