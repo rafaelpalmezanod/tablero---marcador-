@@ -4,6 +4,7 @@
     align-items: center;
     margin: auto;
     width: 800px;
+    margin-top: 22px;
     
   }
   
@@ -14,7 +15,7 @@
     border: 1px solid #ddd;
     border-radius: 5px;
     text-align: center;
-    background-color: #fff;
+    background-color: #ffffff24;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
   }
   
@@ -89,6 +90,7 @@
     color: #fff;
     margin: auto;
     width: 200px;
+    margin-top: 20px;
   }
   
   .boton-comenzar:hover {
