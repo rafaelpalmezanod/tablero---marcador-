@@ -4,23 +4,18 @@
       <div class="equipos">
         <div class="equipo equipo1">
           <h2>Equipo 1</h2>
-          <p class="puntuacion">0</p>
+          <p class="puntuacion">{{ equipo1 }}</p>
         </div>
         <div class="equipo equipo2">
           <h2>Equipo 2</h2>
-          <p class="puntuacion">0</p>
+          <p class="puntuacion">{{ equipo2 }}</p>
         </div>
       </div>
       <div class="temporizador">
-        <p class="tiempo">1:00</p>
-        <select class="selector-tiempo">
-          <option value="1:00">1:00</option>
-          <option value="2:00">2:00</option>
-          <option value="5:00">5:00</option>
-          <option value="personalizado">Personalizado</option>
-        </select>
-        <input type="text" class="tiempo-personalizado" placeholder="Ingresar tiempo">
+        <app-tiempo></app-tiempo>
       </div>
     </div>
-  <app-anotar></app-anotar>
+  <app-anotar (equipoAnoto)="onEquipoAnoto($event)"></app-anotar>
+  <app-estado (cambioEstado)="actualizarEstado($event)"></app-estado>
+  
 </body>

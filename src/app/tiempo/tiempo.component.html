@@ -1,0 +1,13 @@
+<!-- count-down.component.html -->
+<div class="temporizador">
+    <p class="tiempo">{{ obtenerTiempoRestante() }}</p>
+    <select class="selector-tiempo"
+    (change)="seleccionarTiempo($event)">
+      <option value="1:00">1:00</option>
+      <option value="2:00">2:00</option>
+      <option value="5:00">5:00</option>
+      <option value="personalizado">Personalizado</option>
+    </select>
+</div>
+
+

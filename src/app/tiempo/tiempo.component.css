@@ -1,0 +1,45 @@
+.temporizador {
+    text-align: center;
+    margin-top: 20px;
+  }
+  
+  .temporizador .tiempo {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 10px;
+  }
+  
+  .temporizador .selector-tiempo {
+    padding: 5px 10px;
+    font-size: 16px;
+    margin-bottom: 10px;
+  }
+  
+  .temporizador .tiempo-personalizado {
+    padding: 5px 10px;
+    font-size: 16px;
+    width: 100px;
+  }
+  .tiempo {
+    font-family: "Montserrat", sans-serif;
+    font-size: 48px;
+    font-weight: bold;
+    color: #000;
+    text-align: center;
+    margin-bottom: 10px;
+    padding: 10px 20px;
+    border: 2px solid #ddd;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  .tiempo::after {
+    content: "";
+    display: inline-block;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color: #000;
+    margin-left: 10px;
+    animation: pulse 1s infinite;
+  }
