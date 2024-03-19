@@ -8,20 +8,25 @@ import { Component, EventEmitter, Output } from '@angular/core';
   styleUrl: './estado.component.css'
 })
 export class EstadoComponent {
-  estadoEquipo1: string = 'Empate';
-  estadoEquipo2: string = 'Empate';
+  // estadoEquipo1: string = 'Empate';
+  // estadoEquipo2: string = 'Empate';
 
-  @Output() cambioEstado = new EventEmitter<{equipo1: string, equipo2: string}>();
+  // @Output() cambioEstado = new EventEmitter<{equipo1: string, equipo2: string}>();
 
-  anotarEquipo(equipo: number) {
-    if (equipo === 1) {
-      this.estadoEquipo1 = 'Va ganando';
-      this.estadoEquipo2 = 'Va perdiendo';
-    } else if (equipo === 2) {
-      this.estadoEquipo1 = 'Va perdiendo';
-      this.estadoEquipo2 = 'Va ganando';
-    }
+  // anotarEquipo(equipo: number) {
+  //   if (equipo === 1) {
+  //     this.estadoEquipo1 = 'Va ganando';
+  //     this.estadoEquipo2 = 'Va perdiendo';
+  //   } else if (equipo === 2) {
+  //     this.estadoEquipo1 = 'Va perdiendo';
+  //     this.estadoEquipo2 = 'Va ganando';
+  //   }
+  //   console.log('Evento emitido:', { equipo1: this.estadoEquipo1, equipo2: this.estadoEquipo2 });
 
-    this.cambioEstado.emit({equipo1: this.estadoEquipo1, equipo2: this.estadoEquipo2});
-  }
+  //   this.cambioEstado.emit({equipo1: this.estadoEquipo1, equipo2: this.estadoEquipo2});
+  // }
+
+ 
+
+  
 }

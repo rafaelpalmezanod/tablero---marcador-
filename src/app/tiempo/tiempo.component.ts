@@ -11,7 +11,7 @@ export class TiempoComponent implements OnInit {
   tiempo!: string;
   tiempoPersonalizado!: string;
   tiempoRestante!: number;
-
+  mensajeAlerta: string = '';
   intervalo: any;
 
   constructor() { }
@@ -27,7 +27,7 @@ export class TiempoComponent implements OnInit {
     if (tiempo === 'personalizado') {
       tiempo = prompt('Por favor, ingresa el tiempo en formato mm:ss');
       if (tiempo === null) {
-        return; // El usuario canceló la entrada, así que no hacemos nada.
+        return; 
       }
     }
     this.tiempo = tiempo;
@@ -36,7 +36,7 @@ export class TiempoComponent implements OnInit {
 
   iniciarContador(): void {
     if (!this.tiempo || this.tiempo === '') {
-      return; // No se hace nada si el valor de "tiempo" no es válido.
+      return; 
     }
     const partes = this.tiempo.split(':');
     this.tiempoRestante = parseInt(partes[0], 10) * 60 + parseInt(partes[1], 10);
@@ -47,12 +47,17 @@ export class TiempoComponent implements OnInit {
       } else {
         clearInterval(this.intervalo);
       }
-    }, 1000);
+    }, 2000);
   }
 
   obtenerTiempoRestante(): string {
     const minutos = Math.floor(this.tiempoRestante / 60);
     const segundos = this.tiempoRestante % 60;
+      if (segundos === 5) {
+      this.mensajeAlerta = '¡Tiempo a punto de finalizar!';
+      } else {
+        this.mensajeAlerta = '';
+      }
     return `${minutos}:${segundos < 10 ? '0' : ''}${segundos}`;
   }
 
