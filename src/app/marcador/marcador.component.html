@@ -1,4 +1,4 @@
-<body>
+<div class="body">
     <div class="contenedor">
       <h1>Tablero</h1>
       <div class="equipos">
@@ -12,10 +12,14 @@
         </div>
       </div>
       <div class="temporizador">
-        <app-tiempo></app-tiempo>
+        <app-tiempo 
+   
+        [estadoEquipo1]="estadoEquipo1"
+        [estadoEquipo2]="estadoEquipo2"
+        (datosTiempo)="datosTiempos($event)"></app-tiempo>
       </div>
     </div>
-  <app-anotar (equipoAnoto)="onEquipoAnoto($event)"></app-anotar>
+  <app-anotar [ocultarBotonB] = "ocultarBotonR" (equipoAnoto)="onEquipoAnoto($event)"></app-anotar>
 
   
-</body>
+</div>

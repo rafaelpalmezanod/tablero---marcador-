@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import { AnotarComponent } from '../anotar/anotar.component';
 import { TiempoComponent } from '../tiempo/tiempo.component';
 import { EstadoComponent } from '../estado/estado.component';
+import { ThisReceiver } from '@angular/compiler';
 
 
 @Component({
@@ -14,47 +15,26 @@ import { EstadoComponent } from '../estado/estado.component';
 export class MarcadorComponent {
   equipo1 = 0;
   equipo2 = 0;
-  estadoEquipo1: string = 'Empate'; 
-  estadoEquipo2: string = 'Empate';
+  estadoEquipo1:string = ""
+  estadoEquipo2:string = ""
+  ocultarBotonR:boolean = true
+ 
 
-  // actualizarEstado(estado: {equipo1: string, equipo2: string}) {
-  //   this.estadoEquipo1 = estado.equipo1;
-  //   this.estadoEquipo2 = estado.equipo2;
-  // }
+  onEquipoAnoto(data:any) {
+    this.equipo1 = data.golesEquipo1
+    this.equipo2 = data.golesEquipo2
+    this.estadoEquipo1 = data.estadoEquipo1
+    this.estadoEquipo2 = data.estadoEquipo2
 
-  onEquipoAnoto(equipo: number) {
-    if (equipo === 1) {
-      this.equipo1++;
-      if(this.equipo1>this.equipo2){
-        this.estadoEquipo1="ganando"
-        this.estadoEquipo2="perdiendo"
-      }else if(this.equipo1<this.equipo2){
-        this.estadoEquipo1="perdiendo"
-        this.estadoEquipo2="ganando"
-      }else{
-        this.estadoEquipo1="empate"
-        this.estadoEquipo2="empate"
-      }
-      
-    } else if (equipo === 2) {
-      this.equipo2++;
-      if(this.equipo1>this.equipo2){
-        this.estadoEquipo1="ganando"
-        this.estadoEquipo2="perdiendo"
-      }else if(this.equipo1<this.equipo2){
-        this.estadoEquipo1="perdiendo"
-        this.estadoEquipo2="ganando"
-      }else{
-        this.estadoEquipo1="empate"
-        this.estadoEquipo2="empate"
-      }
-    }
-    
+  }
+
+  datosTiempos(data:any){
+    this.ocultarBotonR = data.ocultarboton
   }
   
 }
     
-  
+
 
   
 

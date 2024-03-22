@@ -1,6 +1,9 @@
-
+<div class="contadorConatainer ocultarContador">
+  <p class="contador">contador</p>
+</div>
 <div class="temporizador">
-    <p class="tiempo">{{ obtenerTiempoRestante() }}</p>
+    <p class="tiempo">{{timpoMostrado}}</p>
+    
     <select class="selector-tiempo"
     (change)="seleccionarTiempo($event)">
     
@@ -9,6 +12,9 @@
       <option value="5:00">5:00</option>
       <option value="personalizado">Personalizado</option>
     </select>
+    <p class="mensajeAlerta">{{mensajeAlerta}}</p>
+
+  <button class="boton-comenzar" (click) ="iniciarContador()" >Comenzar partido</button>
     
 </div>
 
